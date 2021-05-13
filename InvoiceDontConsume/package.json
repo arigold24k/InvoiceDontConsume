@@ -9,7 +9,26 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "invoicedontconsume",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/assets/icons/win/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/assets/icons/win/icon.ico",
+      "uninstallerIcon": "src/assets/icons/win/icon.ico",
+      "uninstallDisplayName": "Invoice Dont Consume",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
@@ -46,6 +65,7 @@
   },
   "dependencies": {
     "dotenv": "^9.0.2",
+    "electron-builder": "^22.10.5",
     "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.6.0",
     "oracledb": "^5.1.0",

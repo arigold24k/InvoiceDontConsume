@@ -133,7 +133,7 @@ const ormOrcle = {
             }
 
             // results2 = await connection.execute(`BEGIN PSSI.PSSI_JCI_CONS_INV_RPT_AV ('${incoming_data.po_number}', '${incoming_data.tags[0][Object.keys(incoming_data.tags[0])[0]]}');`);
-            console.log(`Values of result 1: ${results}: Value of result 2: ${results2}`);
+            //console.log(`Values of result 1: ${results}: Value of result 2: ${results2}`);
             if (results && (results2 || shipto !== '001871J')) {
                 cb(null, true);
             }else {
