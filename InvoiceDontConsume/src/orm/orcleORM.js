@@ -115,6 +115,10 @@ const ormOrcle = {
                                             where 
                                                 inv_item_tag in ('${incoming_data.tags[i][keys_[2]]}') 
                                                 and cust_shipto_num = '${incoming_data.tags[i][keys_[0]]}');
+                                                
+                        PSSI.BILL_TAGS_PKGE.UPD_SYNC_ACCPAC_POS('${incoming_data.tags[i][keys_[0]]}');
+  
+                        commit;
   
                      END;`);
 
