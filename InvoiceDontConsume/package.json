@@ -20,7 +20,7 @@
         "nsis"
       ],
       "icon": "src/assets/icons/win/icon.ico",
-      "requestedExecutionLevel": "requireAdministrator"
+      "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
       "installerIcon": "src/assets/icons/win/icon.ico",
